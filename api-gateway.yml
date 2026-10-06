@@ -8,10 +8,17 @@ spring:
   cloud:
     gateway:
       routes:
+        # Product API
         - id: product-service
           uri: lb://product-service
           predicates:
             - Path=/api/products/**
+
+        # Category API
+        - id: category-service
+          uri: lb://product-service
+          predicates:
+            - Path=/api/categories/**
 
 eureka:
   client:
