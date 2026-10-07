@@ -19,6 +19,14 @@ spring:
     locations: classpath:/db/migration
     baseline-on-migrate: true
 
+  ai:
+    openai:
+      api-key: ${OPENROUTER_API_KEY}
+      base-url: https://openrouter.ai/api
+      chat:
+        options:
+          model: openrouter/free
+
 server:
   port: 8083
 
