@@ -43,6 +43,12 @@ spring:
           predicates:
             - Path=/api/categories/**
 
+        # Product Images
+        - id: product-images
+          uri: lb://product-service
+          predicates:
+            - Path=/uploads/products/**
+
 eureka:
   client:
     service-url:
