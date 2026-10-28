@@ -1,3 +1,4 @@
+
 server:
   port: 8080
 
@@ -45,7 +46,7 @@ spring:
 
         # Product Images
         - id: product-images
-          uri: http://localhost:8083
+          uri: lb://product-service
           predicates:
             - Path=/uploads/products/**
 
